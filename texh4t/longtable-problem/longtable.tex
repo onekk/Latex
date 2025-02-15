@@ -1,0 +1,44 @@
+% arara: lualatex: {shell: true}
+\documentclass[a4paper]{article}
+\usepackage[table]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{longtable}
+
+\definecolor{lightgray}{gray}{0.75}
+  
+\begin{document}
+
+Some text to make some text appear before the table.
+
+
+\noindent
+\begin{tabular}%
+  {|>{\raggedright\arraybackslash}p{0.17\textwidth}%
+  |>{\raggedright\arraybackslash}p{0.32\textwidth}%
+  |>{\raggedright\arraybackslash}p{0.14\textwidth}%
+  |>{\raggedright\arraybackslash}p{0.33\textwidth}%
+  |}
+  \hline
+  \rowcolor{lightgray} \textbf{Field} & \multicolumn{3}{l|}{\bfseries File descriptor} \\
+  \hline
+  \textbf{Line1} & data1 & \textbf{Data2} & data2 \\
+  \hline
+  \textbf{Line2} & data1 & \textbf{Data2} & data2 \\
+  \hline
+  \textbf{Line3} & data1 & \textbf{Data2} & data2 \\
+  \hline
+  \textbf{Line4} & data1 & \textbf{Data2} & data2 \\
+  \hline
+\end{tabular}
+
+
+Some text after the table
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX-mode
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,1 @@
+/home/common/Remote/presets/scripts/tex_clear.sh
